@@ -20,9 +20,11 @@ class ListPage extends StatefulWidget {
 
 class _ListState extends State<ListPage> {
   List<TaskObject> Task = [
-    TaskObject(title: 'ovos', doneOrNot: false),
-    TaskObject(title: '1kg de bifes', doneOrNot: false),
-    TaskObject(title: '3g de erva', doneOrNot: false),
+    TaskObject(title: 'Ovos', doneOrNot: false),
+    TaskObject(title: 'Massa', doneOrNot: false),
+    TaskObject(title: 'Arroz', doneOrNot: false),
+    TaskObject(title: 'Batatas', doneOrNot: false),
+    TaskObject(title: 'Salsichas', doneOrNot: false),
   ];
 
 
@@ -30,15 +32,8 @@ class _ListState extends State<ListPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Color(0xFFFA5463),
         child: Scaffold(
           backgroundColor: Colors.white,
-          appBar: AppBar(
-            backgroundColor: Color(0xFFA4CB30),
-            elevation: 0,
-            title: const Text("BeHealthy"),
-            centerTitle: true,
-          ),
 
           body: ListView.builder(
               itemCount: Task.length,

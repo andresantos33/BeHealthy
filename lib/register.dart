@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:behealthy1/bottombar.dart';
-import 'package:behealthy1/register.dart';
 
 
-class login extends StatefulWidget {
-  const login({Key? key}) : super(key: key);
+class register extends StatefulWidget {
+  const register({Key? key}) : super(key: key);
 
   @override
-  State<login> createState() => _loginState();
+  State<register> createState() => _registerState();
 }
 
-class _loginState extends State<login> {
+class _registerState extends State<register> {
 
   final _formKey = GlobalKey<FormState>();
   final _emailControler = TextEditingController();
@@ -28,20 +27,18 @@ class _loginState extends State<login> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Container(
-                  color: Colors.transparent,
-                  child: Column(
-                    children:[
-                      Align(
-                        alignment: Alignment.center,
-                        child: Image.asset(
-                          'assets/images/logo.png',
-                          width: 200,
-                          height: 200,
-                        ),
+                Row(
+                  children: const [
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(120, 0, 0, 0),
+                      child: Text("Registe-se",
+                          style: TextStyle(fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                            color: Color(0xFFA4CB30),
+                          )
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 Container(
                     child: Column(
@@ -49,7 +46,53 @@ class _loginState extends State<login> {
                           Row(
                             children: const [
                               Padding(
-                                padding: EdgeInsets.fromLTRB(0, 50, 0, 5),
+                                padding: EdgeInsets.fromLTRB(0, 40, 0, 5),
+                                child: Text("Nome",
+                                    style: TextStyle(fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      color: Colors.black,
+                                    )
+                                ),
+                              ),
+                            ],
+                          ),
+                        ]
+                    )
+                ),
+                TextFormField(
+                  controller: _emailControler,
+                  decoration: InputDecoration(
+                      label: Text("Digite o seu Nome"),
+                      enabledBorder: const OutlineInputBorder(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(15),
+                          topRight: Radius.circular(15),
+                          bottomLeft: Radius.circular(15),
+                          bottomRight: Radius.circular(15),
+                        ),
+                        borderSide: BorderSide(color: Colors.white),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey.shade400),
+                      ),
+                      fillColor: Colors.grey.shade200,
+                      filled: true,
+                      hintText:'nome@email.com'
+                  ),
+                  validator: (email){
+                    if(email == null || email.isEmpty){
+                      return 'Digite o seu E-Mail';
+                    }
+                    return null;
+                  },
+                ),
+                Container(
+                    child: Column(
+                        children: [
+                          Row(
+                            children: const [
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 20, 0, 5),
                                 child: Text("E-mail",
                                     style: TextStyle(fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -126,7 +169,7 @@ class _loginState extends State<login> {
                       ),
                       fillColor: Colors.grey.shade200,
                       filled: true,
-                      hintText:'Senha'
+                      hintText:'Digite sua senha'
                   ),
                   validator: (senha){
                     if(senha == null || senha.isEmpty){
@@ -148,7 +191,7 @@ class _loginState extends State<login> {
                       ),
                       color: Color(0xFFA4CB30)
                   ),
-                  margin: EdgeInsets.only(top: 95),
+                  margin: EdgeInsets.only(top: 150),
                   child: TextButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context){return bottombar();},),);
@@ -166,37 +209,6 @@ class _loginState extends State<login> {
                               'Entrar',
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 15,
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.bottomCenter,
-                  decoration: const BoxDecoration(
-                      color: Colors.white
-                  ),
-                  margin: EdgeInsets.only(top: 0),
-                  child: TextButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context){return register();},),);
-                      },
-                      child:
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Icon(Icons.app_registration,
-                            color: Color(0xFFA4CB30),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(16),
-                            child: Text(
-                              'Se ainda nao tem conta REGISTE-SE',
-                              style: TextStyle(
-                                color: Color(0xFFA4CB30),
                                 fontSize: 15,
                               ),
                             ),

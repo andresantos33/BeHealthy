@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:behealthy1/bottombar.dart';
-import 'package:behealthy1/register.dart';
 
 
-class login extends StatefulWidget {
-  const login({Key? key}) : super(key: key);
+class admin extends StatefulWidget {
+  const admin({Key? key}) : super(key: key);
 
   @override
-  State<login> createState() => _loginState();
+  State<admin> createState() => _adminState();
 }
 
-class _loginState extends State<login> {
+class _adminState extends State<admin> {
 
   final _formKey = GlobalKey<FormState>();
   final _emailControler = TextEditingController();
@@ -126,7 +125,7 @@ class _loginState extends State<login> {
                       ),
                       fillColor: Colors.grey.shade200,
                       filled: true,
-                      hintText:'Senha'
+                      hintText:'Digite sua senha'
                   ),
                   validator: (senha){
                     if(senha == null || senha.isEmpty){
@@ -148,7 +147,7 @@ class _loginState extends State<login> {
                       ),
                       color: Color(0xFFA4CB30)
                   ),
-                  margin: EdgeInsets.only(top: 95),
+                  margin: EdgeInsets.only(top: 100),
                   child: TextButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context){return bottombar();},),);
@@ -166,37 +165,6 @@ class _loginState extends State<login> {
                               'Entrar',
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 15,
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.bottomCenter,
-                  decoration: const BoxDecoration(
-                      color: Colors.white
-                  ),
-                  margin: EdgeInsets.only(top: 0),
-                  child: TextButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context){return register();},),);
-                      },
-                      child:
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Icon(Icons.app_registration,
-                            color: Color(0xFFA4CB30),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(16),
-                            child: Text(
-                              'Se ainda nao tem conta REGISTE-SE',
-                              style: TextStyle(
-                                color: Color(0xFFA4CB30),
                                 fontSize: 15,
                               ),
                             ),
