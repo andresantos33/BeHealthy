@@ -79,6 +79,7 @@ class _storeState extends State<store> {
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
         child: Icon(Icons.add),
+        backgroundColor: Color(0xFFA4CB30),
       ),
       body: ListView.builder(
         itemCount: db.toDoList.length,

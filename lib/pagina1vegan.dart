@@ -120,7 +120,7 @@ class pagina1vegan extends StatelessWidget {
                 children: const [
                   Padding(
                     padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
-                    child: Text("4- Arrume no centro de uma travessa os brócolos, a\n couve-flor e os demais legumes, enfeite com a salsinha\n e a cebolinha picadas. Regue com tempero a gosto.\n Sirva a salada em seguida rodeada por uma coroa\n de folhas de alface picadas.",
+                    child: Text("4- Arrume no centro de uma travessa os brócolos, a\n couve-flor e os demais legumes, enfeite com a\n salsinha e a cebolinha picadas. Regue com tempero\n a gosto. Sirva a salada em seguida rodeada\n por uma coroa de folhas de alface picadas.",
                         style: TextStyle(fontWeight: FontWeight.bold,
                           fontSize: 15,
                           color: Colors.black,
