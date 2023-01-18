@@ -55,7 +55,7 @@ class pagina1refeicoes extends StatelessWidget {
                 children: const [
                   Padding(
                     padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
-                    child: Text("2 Files de salmao\n Sal e pimenta-do-reino a gosto\n 1 e 1/2 Colher de sopa de azeite",
+                    child: Text("2 Filetes de salmão\n Sal e pimenta-do-reino a gosto\n 1 e 1/2 Colher de sopa de azeite",
                         style: TextStyle(fontWeight: FontWeight.bold,
                           fontSize: 15,
                           color: Colors.black,
@@ -120,7 +120,7 @@ class pagina1refeicoes extends StatelessWidget {
                 children: const [
                   Padding(
                     padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
-                    child: Text("2-  Faça cerca de 3 a 4 cortes na pele do salmão\n de 05 a 1 cm de profundidade;",
+                    child: Text("2- Faça cerca de 3 a 4 cortes na pele do salmão\n de 05 a 1 cm de profundidade;",
                         style: TextStyle(fontWeight: FontWeight.bold,
                           fontSize: 15,
                           color: Colors.black,

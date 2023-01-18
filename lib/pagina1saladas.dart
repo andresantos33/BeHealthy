@@ -130,7 +130,7 @@ class pagina1saladas extends StatelessWidget {
                 ],
               ),
             ]
-        )
+        ),
     );
   }
 }

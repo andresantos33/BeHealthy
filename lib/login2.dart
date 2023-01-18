@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:behealthy1/admin.dart';
 import 'package:behealthy1/login.dart';
 
 class login2 extends StatefulWidget {
@@ -71,43 +70,7 @@ class _login2State extends State<login2> {
                       )
                   ),
                 ),
-                Container(
-                  alignment: Alignment.bottomCenter,
-                  decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        topRight: Radius.circular(15),
-                        bottomLeft: Radius.circular(15),
-                        bottomRight: Radius.circular(15),
-                      )
-                  ),
-                  margin: EdgeInsets.only(top: 20),
-                  child: TextButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context){return admin();},),);
-                      },
-                      child:
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          Icon(Icons.admin_panel_settings,
-                            color: Colors.black,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(16),
-                            child: Text(
-                              'Admin',
-                              style: TextStyle(fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                                fontSize: 15,
-                              ),
-                            ),
-                          )
-                        ],
-                      )
-                  ),
-                ),
+
               ],
             ),
           ),

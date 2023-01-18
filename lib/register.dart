@@ -14,6 +14,7 @@ class _registerState extends State<register> {
   final _formKey = GlobalKey<FormState>();
   final _emailControler = TextEditingController();
   final _senhaControler = TextEditingController();
+  final _usernameControler = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +61,7 @@ class _registerState extends State<register> {
                     )
                 ),
                 TextFormField(
-                  controller: _emailControler,
+                  controller: _usernameControler,
                   decoration: InputDecoration(
                       label: Text("Digite o seu Nome"),
                       enabledBorder: const OutlineInputBorder(
@@ -77,14 +78,8 @@ class _registerState extends State<register> {
                       ),
                       fillColor: Colors.grey.shade200,
                       filled: true,
-                      hintText:'nome@email.com'
+                      hintText:'Digite o seu nome'
                   ),
-                  validator: (email){
-                    if(email == null || email.isEmpty){
-                      return 'Digite o seu E-Mail';
-                    }
-                    return null;
-                  },
                 ),
                 Container(
                     child: Column(
@@ -125,12 +120,7 @@ class _registerState extends State<register> {
                       filled: true,
                       hintText:'nome@email.com'
                   ),
-                  validator: (email){
-                    if(email == null || email.isEmpty){
-                      return 'Digite o seu E-Mail';
-                    }
-                    return null;
-                  },
+
                 ),
                 Container(
                     child: Column(
@@ -171,14 +161,7 @@ class _registerState extends State<register> {
                       filled: true,
                       hintText:'Digite sua senha'
                   ),
-                  validator: (senha){
-                    if(senha == null || senha.isEmpty){
-                      return 'Digite a sua senha';
-                    } else if (senha.length <= 6){
-                      return 'Digite uma senha com mais de 6 Digitos';
-                    }
-                    return null;
-                  },
+
                 ),
                 Container(
                   alignment: Alignment.bottomCenter,
